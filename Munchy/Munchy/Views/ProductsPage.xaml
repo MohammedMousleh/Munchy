@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="0"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:behaviors="clr-namespace:Munchy.Behavious"
+             xmlns:converters="clr-namespace:Munchy.Converters"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:renderes="clr-namespace:Munchy.Renderes"
+             mc:Ignorable="d"
+             x:Class="Munchy.Views.ProductsPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F5F6F1"
+             NavigationPage.HasBackButton="False"
+             IconImageSource="{Binding Icon}"
+             x:Name="ProductPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ShowOfferConverter x:Key="ShowOfferConverter"></converters:ShowOfferConverter>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 Command="{Binding LoadProductsCommand}" >
+        
+        <ScrollView  BackgroundColor="#F5F6F1" >
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0"
+                   Source="overlay.png"
+                   Aspect="Fill"
+                   HeightRequest="300"
+                   VerticalOptions="StartAndExpand" />
+            <StackLayout Grid.Row="0"
+                         Orientation="Horizontal"
+                         Spacing="20"
+                         HorizontalOptions="Start"
+                         VerticalOptions="Start"
+                         Margin="20,50">
+                <ImageButton WidthRequest="23"
+                             HeightRequest="15"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center" />
+                <Label Text="Munchy"
+                       FontSize="16"
+                       VerticalOptions="Center"
+                       TextColor="White" />
+            </StackLayout>
+            <StackLayout Grid.Row="0"
+                         Orientation="Vertical"
+                         Margin="0,20"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+
+                <renderes:MaterialFrame Elevation="6"
+                                        Padding="0"
+                                        CornerRadius="10">
+                    <SearchBar Placeholder="Søg"
+                                   SearchCommand="{Binding Path=BindingContext.SearchForProductCommand,Source={x:Reference ProductPage}}"
+                                   Text="{Binding Path=BindingContext.SearchedText,Source={x:Reference ProductPage}}"
+                                   PlaceholderColor="Black"
+                               FontFamily="sans-serif-condensed"
+                               IsSpellCheckEnabled="True"
+                               BackgroundColor="White"
+                               TextColor="Black"
+                               FontSize="16"
+                               HorizontalOptions="Center" />
+                </renderes:MaterialFrame>
+                <Label Text="Søg efter navnet på dit ønskede produckt"
+                       TextColor="White"
+                       FontFamily="sans-serif-condensed"
+                       FontSize="12"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+
+            <pancakeview:PancakeView Grid.Row="1"
+                                     Elevation="6"
+                                     BackgroundGradientStartColor="#7653C7"
+                                     BackgroundGradientEndColor="White"
+                                     Margin="20,-40,20,0"
+                                     Padding="0"
+                                     HeightRequest="220"
+                                     VerticalOptions="Start">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <forms:AnimationView Animation="artishow.json"
+                                         Grid.Row="1"
+                                         AutoPlay="True"
+                                         Loop="True"
+                                         Grid.Column="0"></forms:AnimationView>
+                    <Label Grid.Column="0"
+                           Grid.Row="0"
+                           Text="Dagens Ret"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           Padding="10"
+                           CharacterSpacing="1"></Label>
+
+                </Grid>
+
+            </pancakeview:PancakeView>
+
+            <StackLayout Grid.Row="2"
+                       
+                      Margin="10,0,10,0"
+                      BindableLayout.ItemsSource="{Binding Products}"
+                      VerticalOptions="FillAndExpand">
+
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                      
+                        <StackLayout>
+                            <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label FontFamily="sans-serif-condensed"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Text="{Binding Name}"
+                                           VerticalTextAlignment="Center"
+                                           TextColor="Black"
+                                           FontSize="Medium"
+                                           FontAttributes="Bold"
+                                           HorizontalTextAlignment="Start"></Label>
+                                    <Button Grid.Row="0"
+                                            Grid.Column="1"
+                                            Text="Se alle  ->"
+                                            HorizontalOptions="End"
+                                            BackgroundColor="Transparent"
+                                            FontAttributes="Bold"
+                                            TextColor="#7D58C9"
+                                            FontFamily="sans-serif-condensed"
+                                        Command="{Binding Path=BindingContext.LoadProductCategoryCommand, Source={x:Reference ProductPage}}" CommandParameter="{Binding .}"></Button>
+                                </Grid>
+
+                                <CollectionView  HeightRequest="280" ItemsSource="{Binding Products}"
+                                                SelectionMode="Single">
+                                    <CollectionView.ItemsLayout>
+                                        <GridItemsLayout Orientation="Horizontal"
+                                                         HorizontalItemSpacing="10"></GridItemsLayout>
+                                    </CollectionView.ItemsLayout>
+
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+
+                                        <Frame BackgroundColor="Transparent" Margin="0" Padding="5">
+                                         
+                                            <renderes:MaterialFrame Padding="0"
+                                                                    CornerRadius="2"
+                                                                    Elevation="6"
+                                                                 
+                                                                    HasShadow="True"
+                                                                    WidthRequest="180"
+                                                                    IsVisible="{Binding InStock}">
+
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                     <RowDefinition></RowDefinition>
+                                                    <RowDefinition></RowDefinition>
+                                                    <RowDefinition Height="auto"></RowDefinition>
+                                                    <RowDefinition Height="auto"></RowDefinition>
+                                                    <RowDefinition Height="auto"></RowDefinition>
+
+
+                                                </Grid.RowDefinitions>
+
+                                                    <Image Aspect="AspectFill"
+                                                           Grid.Row="0"
+                                                           Grid.Column="0"
+                                                           Grid.RowSpan="2"
+                                                           Source="{Binding ProductImage.ImageSource}"></Image>
+                                                    <Image Grid.Row="0"
+                                                           Grid.Column="0"
+                                                           Grid.RowSpan="2"
+                                                           Source="tilbud.png"
+                                                           IsVisible="{Binding Offer, Converter={StaticResource ShowOfferConverter}}"></Image>
+
+
+                                                        <Label Grid.Row="2" Margin="10,0,0,0" Text="{Binding Name}"
+                                                               TextColor="Black"
+                                                               FontSize="15"
+                                                               FontFamily="sans-serif-thin"
+                                                               FontAttributes="Bold"></Label>
+                                                        <Label Margin="10,0,0,0" FontSize="13"
+                                                               FontAttributes="Bold"
+                                                               TextColor="Black"
+                                                               FontFamily="sans-serif-condensed"
+                                                               Text="{Binding Price, StringFormat='Pris {0:F0},00 kr.'}"
+                                                               Grid.Row="3"
+                                                               Grid.Column="0"></Label>
+
+                                                        <StackLayout Grid.Row="4" Orientation="Horizontal"
+                                                                     HorizontalOptions="FillAndExpand">
+
+                                                    <Label FontSize="10"
+                                                           FontAttributes="Bold"
+                                                           TextColor="Red"
+                                                           FontFamily="sans-serif-condensed"
+                                                           Text="{Binding AmountOffer.Amount, StringFormat=' Ta {0} for'}"></Label>
+
+                                                    <Label FontSize="10"
+                                                           FontAttributes="Bold"
+                                                           TextColor="Red"
+                                                           FontFamily="sans-serif-condensed"
+                                                           Text="{Binding AmountOffer.Price, StringFormat='{0:F0},00 kr.'}"></Label>
+                                                        </StackLayout>
+
+                                                    <Button Grid.Row="5"
+                                                            BackgroundColor="Transparent"
+                                                            Command="{Binding Path=BindingContext.AddToBasketCommand,Source={x:Reference ProductPage}}"
+                                                            CommandParameter="{Binding .}"
+                                                            Font="13"
+                                                            FontFamily="sans-serif-condensed"
+                                                            TextColor="Black"
+                                                            Margin="0"
+                                                            Padding="0"
+                                                            Text="Tilføj til kurv">
+                                                        <Button.Behaviors>
+                                                            <behaviors:ButtonAnimationBehavior></behaviors:ButtonAnimationBehavior>
+                                                        </Button.Behaviors>
+                                                    </Button>
+                                                </Grid>
+                                            </renderes:MaterialFrame>
+                                        </Frame>
+                                    </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+
+                            </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+    </RefreshView>
+</ContentPage>
+        

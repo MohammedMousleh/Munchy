@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:renderes="clr-namespace:Munchy.Renderes"
+             mc:Ignorable="d"
+             x:Class="Munchy.Views.ShowRecieptPage"
+             x:Name="RecieptPage"
+             BackgroundColor="#F5F6F1">
+    <ContentPage.Content> 
+       
+        <renderes:MaterialFrame HasShadow="True" Elevation="6">
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition/>
+                    <RowDefinition Height="auto" />
+
+                </Grid.RowDefinitions>
+                <Label Text="Betalt den" Grid.Row="0" HorizontalOptions="Center"></Label>
+              
+                <Label FontSize="15"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Grid.Row="1"
+                       Text="{Binding Path=BindingContext.Created, Source={x:Reference RecieptPage}}" />
+              
+                <ListView ItemsSource="{Binding Order.OrderedProducts}"
+                          Grid.Row="2" HasUnevenRows="True">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ScrollView>
+                                    <renderes:MaterialFrame>
+                                    <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label  FontSize="15"
+                                            Text="{Binding Name}"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="3"
+                                            VerticalOptions="Center"
+                                            TextColor="Black"
+                                            ></Label>
+                                    <Label  FontSize="15"
+                                            Text="{Binding Quantity , StringFormat='{0} x'}"
+                                            Grid.Column="3"
+                                            VerticalOptions="Center"
+                                            TextColor="Black"
+                                            HorizontalOptions="End"></Label>
+                                    <Label  FontSize="15"
+                                            Text="{Binding Price , StringFormat='{0:C}'}"
+                                            Grid.Column="5"
+                                            Grid.ColumnSpan="2"
+                                            TextColor="Black"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center"></Label>
+                                </Grid>
+                                </renderes:MaterialFrame>
+                                </ScrollView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+                <Label HorizontalOptions="Center"
+                       Text="{Binding Price , StringFormat=' TOTAL PRIS : {0:C}'}"
+                       Grid.Row="3"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="15"></Label>
+            </Grid>
+        </renderes:MaterialFrame>
+
+    </ContentPage.Content>
+</ContentPage>

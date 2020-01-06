@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:Munchy.Converters"
+             xmlns:renderes="clr-namespace:Munchy.Renderes"
+             mc:Ignorable="d"
+             x:Class="Munchy.Views.ScannedRecieptPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:RecieptTextColorConverter x:Key="RecieptTextColorConverter"></converters:RecieptTextColorConverter>
+            <converters:RecieptShowScanBtnConverter x:Key="RecieptShowScanBtnConverter"></converters:RecieptShowScanBtnConverter>
+            <converters:RecieptShowPriceConverter x:Key="RecieptShowPriceConverter"></converters:RecieptShowPriceConverter>
+            <converters:IsEmptyConverter x:Key="IsEmptyConverter"></converters:IsEmptyConverter>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+       
+        <Image Grid.Row="0" Source="EmptyInboxPurple.png"
+               VerticalOptions="EndAndExpand"
+               HorizontalOptions="Center"
+               IsVisible="{Binding ScannedReciepts.Count, Converter={d:StaticResource IsEmptyConverter }}"></Image>
+
+        <Label Grid.Row="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               IsVisible="{Binding ScannedReciepts.Count, Converter={d:StaticResource IsEmptyConverter }}"
+               Text="Ingen kvitteringer endnu" CharacterSpacing="1" FontAttributes="Bold" TextColor="Black" FontSize="Medium"></Label>
+      
+        <ListView Grid.Row="0" CachingStrategy="RecycleElement"
+                  HasUnevenRows="True"
+                  x:Name="RecieptListView"
+                  ItemsSource="{Binding ScannedReciepts}"
+                  RefreshCommand="{Binding LoadScannedRecieptsCommand}"
+                  IsPullToRefreshEnabled="True"
+                  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                  ItemSelected="OnItemSelected">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BackgroundColor="Transparent">
+                            <StackLayout>
+                                <Label VerticalOptions="Center"
+                                       CharacterSpacing="1"
+                                       TextColor="{Binding IsScanned, Converter={StaticResource RecieptTextColorConverter}}"
+                                       Text="{Binding Text}"></Label>
+                                <Button Text="Scan"
+                                        CommandParameter="{Binding .}"
+                                        BackgroundColor="Transparent"
+                                        CharacterSpacing="1"
+                                        HorizontalOptions="EndAndExpand"
+                                        IsVisible="{Binding IsScanned, Converter={StaticResource RecieptShowScanBtnConverter}}"></Button>
+                                <Label Text="{Binding Created}"></Label>
+                                <Label Text="{Binding Price , StringFormat='{0:C}' ,Converter={StaticResource RecieptShowScanBtnConverter}}"
+                                       HorizontalOptions="End"
+                                       FontAttributes="Bold"
+                                       IsVisible="{Binding IsScanned , Converter={StaticResource RecieptShowPriceConverter}}"
+                                       VerticalOptions="Center"></Label>
+                            </StackLayout>
+
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:converters="clr-namespace:Munchy.Converters"
+             mc:Ignorable="d"
+             BackgroundColor="#F5F6F1"
+             x:Class="Munchy.Views.SavedCardPage" x:Name="CardPage">
+
+
+    <ContentPage.Resources>
+        <converters:RecieptShowScanBtnConverter x:Key="InvertBoolConverter"></converters:RecieptShowScanBtnConverter>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Label IsVisible="{Binding IsBusy, Converter={StaticResource InvertBoolConverter}}" x:Name="messageLbl" Grid.Row="0"  CharacterSpacing="1" FontAttributes="Bold" Text="GEM KORTET FOR HURTIG BETALING!" VerticalOptions="Center"  FontSize="Small" TextColor="Black" HorizontalOptions="Center"></Label>
+
+
+        <forms:AnimationView IsVisible="{Binding IsBusy, Converter={StaticResource InvertBoolConverter}}" Grid.Row="1" Animation="scanCard.json" Loop="True" AutoPlay="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+        </forms:AnimationView>
+
+        <forms:AnimationView Animation="loading.json"
+                             VerticalOptions="Center"
+                             Loop="True"
+                             Grid.Row="1"
+                             AutoPlay="True"
+                             IsVisible="{Binding IsBusy}"></forms:AnimationView>
+
+        <Button Grid.Row="2"
+                IsVisible="{Binding IsBusy, Converter={StaticResource InvertBoolConverter}}"
+                VerticalOptions="End"
+                Command="{Binding Path=BindingContext.OnSavedCardCommand, Source={x:Reference CardPage}}" 
+                CharacterSpacing="1"
+                BackgroundColor="#7D58C9"
+                CornerRadius="10"
+                TextColor="White"
+                Text="Gem Kortet"></Button>
+      
+        <Button IsVisible="{Binding IsBusy, Converter={StaticResource InvertBoolConverter}}"
+                Command="{Binding Path=BindingContext.OnNoCommand, Source={x:Reference CardPage}}"
+                Grid.Row="3" 
+                VerticalOptions="Start" 
+                CharacterSpacing="1"
+                BackgroundColor="#7D58C9"
+                CornerRadius="10"
+                TextColor="White"
+                Text="Nej Tak"></Button>
+
+    </Grid>
+
+</ContentPage>

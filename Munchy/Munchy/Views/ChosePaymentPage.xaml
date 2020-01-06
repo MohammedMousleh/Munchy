@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20,0,20,20"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:Munchy.Converters"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="Munchy.Views.ChosePaymentPage"
+             x:Name="PaymentPage"
+             BackgroundColor="#F5F6F1">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:RecieptShowScanBtnConverter x:Key="InvertBoolConvertert"></converters:RecieptShowScanBtnConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="20" Spacing="20">
+
+        <pancakeview:PancakeView x:Name="payNowBtn"
+               HasShadow="True"
+               CornerRadius="10"
+               Grid.Row="0"
+                                 BackgroundGradientStartColor="#7D58C9"
+                                 BackgroundGradientEndColor="White"
+               VerticalOptions="FillAndExpand"
+               BackgroundColor="White"
+               IsVisible="{Binding IsBusy, Converter={StaticResource InvertBoolConvertert}}">
+          
+            <pancakeview:PancakeView.GestureRecognizers>
+                <TapGestureRecognizer  x:Name="payNowTap"
+                                       Command="{Binding Path=BindingContext.PayNowCommand , Source={x:Reference PaymentPage}}">
+
+                </TapGestureRecognizer>
+         
+            </pancakeview:PancakeView.GestureRecognizers>
+          
+           
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       Text="Køb Nu"
+                       TextColor="White"
+                       Grid.Row="0"
+                       FontSize="50"></Label>
+       
+
+        </pancakeview:PancakeView>
+
+        <forms:AnimationView Animation="loading.json" Loop="True" AutoPlay="True" IsVisible="{Binding IsBusy}"></forms:AnimationView>
+
+        <pancakeview:PancakeView x:Name="orderBtn"
+                                 BackgroundGradientStartColor="White"
+                                 BackgroundGradientEndColor="#7D58C9"
+                                 HasShadow="True"
+               VerticalOptions="FillAndExpand"
+                                 CornerRadius="10"  BackgroundColor="BlanchedAlmond"
+                                 IsVisible="{Binding IsBusy, Converter={StaticResource InvertBoolConvertert}}">
+            <pancakeview:PancakeView.GestureRecognizers>
+                
+                <TapGestureRecognizer x:Name="orderTap"
+                                      Command="{Binding Path=BindingContext.OrderCommand , Source={x:Reference PaymentPage}}">
+                </TapGestureRecognizer>
+                
+            </pancakeview:PancakeView.GestureRecognizers>
+
+            <Label HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold"
+                   Text="Bestil Mad"
+                   TextColor="White"
+                   Grid.Row="0"
+                   FontSize="50"></Label>
+
+        </pancakeview:PancakeView>
+        
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             mc:Ignorable="d"
+             BackgroundColor="#F5F6F1"
+             x:Class="Munchy.Views.SplashScreenPage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label  x:Name="title" 
+                   HorizontalOptions="Center"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   FontFamily="sans-serif-condensed"
+                   CharacterSpacing="1"
+                   TextColor="Black"></Label>
+            <Label Text="Vi ser lige hvad kantinen har på menuen i dag.."
+                   HorizontalOptions="Center"
+                   FontFamily="sans-serif-condensed"
+                   FontAttributes="Bold"
+                   CharacterSpacing="1"
+                   FontSize="15"
+                   TextColor="Black"></Label>
+            <forms:AnimationView Animation="fruits.json"
+                                 Loop="True"
+                                 AutoPlay="True"
+                                 VerticalOptions="FillAndExpand"></forms:AnimationView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,1062 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "Munchy/1.0.0": {
+        "dependencies": {
+          "Com.Airbnb.Xamarin.Forms.Lottie": "3.0.3",
+          "Microsoft.AppCenter.Analytics": "2.6.4",
+          "Microsoft.AppCenter.Crashes": "2.6.4",
+          "Microsoft.AppCenter.Push": "2.6.4",
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "Nito.AsyncEx": "5.0.0",
+          "Plugin.Badge": "2.2.1",
+          "Plugin.CloudFirestore": "2.0.0",
+          "Plugin.Fingerprint": "1.4.9",
+          "Refractored.MvvmHelpers": "1.3.0",
+          "Xam.Plugin.Connectivity": "3.2.0",
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.4.0.991265",
+          "Xamarin.Forms.PancakeView": "1.3.6",
+          "ZXing.Net.Mobile.Forms": "2.4.1"
+        },
+        "runtime": {
+          "Munchy.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/3.0.3": {
+        "dependencies": {
+          "Xamarin.Forms": "4.4.0.991265"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Lottie.Forms.dll": {
+            "assemblyVersion": "3.0.3.0",
+            "fileVersion": "3.0.3.0"
+          }
+        }
+      },
+      "Microsoft.AppCenter/2.6.4": {
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.AppCenter.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "2.6.4.0"
+          }
+        }
+      },
+      "Microsoft.AppCenter.Analytics/2.6.4": {
+        "dependencies": {
+          "Microsoft.AppCenter": "2.6.4"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "2.6.4.0"
+          }
+        }
+      },
+      "Microsoft.AppCenter.Crashes/2.6.4": {
+        "dependencies": {
+          "Microsoft.AppCenter": "2.6.4"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.AppCenter.Crashes.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "2.6.4.0"
+          }
+        }
+      },
+      "Microsoft.AppCenter.Push/2.6.4": {
+        "dependencies": {
+          "Microsoft.AppCenter": "2.6.4"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.AppCenter.Push.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "2.6.4.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "Nito.AsyncEx/5.0.0": {
+        "dependencies": {
+          "Nito.AsyncEx.Context": "5.0.0",
+          "Nito.AsyncEx.Coordination": "5.0.0",
+          "Nito.AsyncEx.Interop.WaitHandles": "5.0.0",
+          "Nito.AsyncEx.Oop": "5.0.0",
+          "Nito.AsyncEx.Tasks": "5.0.0",
+          "Nito.Cancellation": "1.0.5"
+        }
+      },
+      "Nito.AsyncEx.Context/5.0.0": {
+        "dependencies": {
+          "Nito.AsyncEx.Tasks": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nito.AsyncEx.Context.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Nito.AsyncEx.Coordination/5.0.0": {
+        "dependencies": {
+          "Nito.AsyncEx.Tasks": "5.0.0",
+          "Nito.Collections.Deque": "1.0.4",
+          "Nito.Disposables": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nito.AsyncEx.Coordination.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Nito.AsyncEx.Interop.WaitHandles/5.0.0": {
+        "dependencies": {
+          "Nito.AsyncEx.Tasks": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nito.AsyncEx.Interop.WaitHandles.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Nito.AsyncEx.Oop/5.0.0": {
+        "dependencies": {
+          "Nito.AsyncEx.Coordination": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nito.AsyncEx.Oop.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Nito.AsyncEx.Tasks/5.0.0": {
+        "dependencies": {
+          "Nito.Disposables": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nito.AsyncEx.Tasks.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Nito.Cancellation/1.0.5": {
+        "dependencies": {
+          "Nito.Disposables": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nito.Cancellation.dll": {
+            "assemblyVersion": "1.0.5.0",
+            "fileVersion": "1.0.5.0"
+          }
+        }
+      },
+      "Nito.Collections.Deque/1.0.4": {
+        "runtime": {
+          "lib/netstandard2.0/Nito.Collections.Deque.dll": {
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
+          }
+        }
+      },
+      "Nito.Disposables/2.0.0": {
+        "dependencies": {
+          "System.Collections.Immutable": "1.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nito.Disposables.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Plugin.Badge/2.2.1": {
+        "dependencies": {
+          "Xamarin.Forms": "4.4.0.991265"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Plugin.Badge.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Plugin.CloudFirestore/2.0.0": {
+        "dependencies": {
+          "System.Reactive": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.Primitives.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/Plugin.CloudFirestore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/System.AppContext.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Collections.Concurrent.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Collections.NonGeneric.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Collections.Specialized.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Collections.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.ComponentModel.Composition.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.ComponentModel.EventBasedAsync.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.ComponentModel.Primitives.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.ComponentModel.TypeConverter.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.ComponentModel.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Console.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Core.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Data.Common.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Data.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Diagnostics.Contracts.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Diagnostics.Debug.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Diagnostics.FileVersionInfo.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Diagnostics.Process.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Diagnostics.StackTrace.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Diagnostics.TextWriterTraceListener.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Diagnostics.Tools.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Diagnostics.TraceSource.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Diagnostics.Tracing.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Drawing.Primitives.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Drawing.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Dynamic.Runtime.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Globalization.Calendars.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Globalization.Extensions.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Globalization.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.Compression.FileSystem.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.Compression.ZipFile.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.Compression.dll": {
+            "assemblyVersion": "4.1.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.FileSystem.DriveInfo.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.FileSystem.Primitives.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.FileSystem.Watcher.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.FileSystem.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.IsolatedStorage.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.MemoryMappedFiles.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.Pipes.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.UnmanagedMemoryStream.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.IO.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Linq.Expressions.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Linq.Parallel.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Linq.Queryable.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Linq.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.Http.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.NameResolution.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.NetworkInformation.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.Ping.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.Primitives.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.Requests.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.Security.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.Sockets.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.WebHeaderCollection.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.WebSockets.Client.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.WebSockets.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Net.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Numerics.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.ObjectModel.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Reflection.Extensions.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Reflection.Primitives.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Reflection.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Resources.Reader.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Resources.ResourceManager.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Resources.Writer.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.CompilerServices.VisualC.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.Extensions.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.Handles.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.InteropServices.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.Numerics.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.Serialization.Formatters.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.Serialization.Json.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.Serialization.Primitives.dll": {
+            "assemblyVersion": "4.1.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.Serialization.Xml.dll": {
+            "assemblyVersion": "4.1.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.Serialization.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Runtime.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Security.Claims.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Security.Cryptography.Algorithms.dll": {
+            "assemblyVersion": "4.2.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Security.Cryptography.Csp.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Security.Cryptography.Encoding.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Security.Cryptography.Primitives.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Security.Cryptography.X509Certificates.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Security.Principal.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Security.SecureString.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.ServiceModel.Web.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Text.Encoding.Extensions.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Text.Encoding.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Text.RegularExpressions.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Threading.Overlapped.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Threading.Tasks.Parallel.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Threading.Tasks.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Threading.Thread.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Threading.ThreadPool.dll": {
+            "assemblyVersion": "4.0.12.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Threading.Timer.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Threading.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Transactions.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.ValueTuple.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Web.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Windows.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Xml.Linq.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Xml.ReaderWriter.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Xml.Serialization.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Xml.XDocument.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Xml.XPath.XDocument.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Xml.XPath.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Xml.XmlDocument.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Xml.XmlSerializer.dll": {
+            "assemblyVersion": "4.0.11.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.Xml.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/System.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/mscorlib.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          },
+          "lib/netstandard2.0/netstandard.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "1.0.26419.2"
+          }
+        }
+      },
+      "Plugin.Fingerprint/1.4.9": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Fingerprint.Abstractions.dll": {
+            "assemblyVersion": "1.4.9.0",
+            "fileVersion": "1.4.9.0"
+          },
+          "lib/netstandard1.0/Plugin.Fingerprint.dll": {
+            "assemblyVersion": "1.4.9.0",
+            "fileVersion": "1.4.9.0"
+          }
+        }
+      },
+      "Refractored.MvvmHelpers/1.3.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/MvvmHelpers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.Collections.Immutable/1.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Reactive/4.0.0": {
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.398"
+          }
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Connectivity.Abstractions.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          },
+          "lib/netstandard1.0/Plugin.Connectivity.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.3.1": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/4.4.0.991265": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.4.0.398"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.4.0.398"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.4.0.398"
+          }
+        }
+      },
+      "Xamarin.Forms.PancakeView/1.3.6": {
+        "dependencies": {
+          "Xamarin.Forms": "4.4.0.991265"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.PancakeView.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "ZXing.Net.Mobile/2.4.1": {
+        "runtime": {
+          "lib/netstandard1.0/ZXing.Net.Mobile.Core.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          },
+          "lib/netstandard1.0/ZXingNetMobile.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          },
+          "lib/netstandard1.0/zxing.portable.dll": {
+            "assemblyVersion": "0.16.2.0",
+            "fileVersion": "0.16.2.0"
+          }
+        }
+      },
+      "ZXing.Net.Mobile.Forms/2.4.1": {
+        "dependencies": {
+          "Xamarin.Forms": "4.4.0.991265",
+          "ZXing.Net.Mobile": "2.4.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/ZXing.Net.Mobile.Forms.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Munchy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Com.Airbnb.Xamarin.Forms.Lottie/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Lf0Q4K5WiqjAJRH12BJUOCfoKIMiPWrpn7gMNBrX+6pwjSiSPE96EUakaag0Q2Xj5bn9vJ48lVXlRoVIjBAgCw==",
+      "path": "com.airbnb.xamarin.forms.lottie/3.0.3",
+      "hashPath": "com.airbnb.xamarin.forms.lottie.3.0.3.nupkg.sha512"
+    },
+    "Microsoft.AppCenter/2.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l8EmaA9jbwZzeq4BMmRpeYEf3/nYcw0TnZIQ/J73LT6VFJNGsqTWAFk4p9HH6tCvt8Zay/7H+wzpeOaMKRHA1A==",
+      "path": "microsoft.appcenter/2.6.4",
+      "hashPath": "microsoft.appcenter.2.6.4.nupkg.sha512"
+    },
+    "Microsoft.AppCenter.Analytics/2.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ekzf3xIKAX7+01E32+VpUvO32HzDaNIgVCzhsdkRvwIz0/gfPw3i5eZuhpL6RBXbEZL5qp6s09aW4PNDR/eFKA==",
+      "path": "microsoft.appcenter.analytics/2.6.4",
+      "hashPath": "microsoft.appcenter.analytics.2.6.4.nupkg.sha512"
+    },
+    "Microsoft.AppCenter.Crashes/2.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JngVtWPTWrvk237QJL3L1OHDWpxZhO44hgMHMyYOYEJmmvpzy8Qg/weyGCVdZ4Dsg0cyULeQyMhAtm4arX3nyw==",
+      "path": "microsoft.appcenter.crashes/2.6.4",
+      "hashPath": "microsoft.appcenter.crashes.2.6.4.nupkg.sha512"
+    },
+    "Microsoft.AppCenter.Push/2.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wf6IjyKWLSxD3Qdq0NyosRIOJ9bbRX2ECuZa+bpcXfke56/2etSBB9Q7z7Wm859ymDc1PC9TKBUzYXkkVbkxjg==",
+      "path": "microsoft.appcenter.push/2.6.4",
+      "hashPath": "microsoft.appcenter.push.2.6.4.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "Nito.AsyncEx/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EgeMl8BoaLg6mOXs7MVjl3uqUqZlL0uYti2/G128EA60U9UqoYlF0AMtGOA1/EP+bvrjcvixK8D3MLpwr2dnSw==",
+      "path": "nito.asyncex/5.0.0",
+      "hashPath": "nito.asyncex.5.0.0.nupkg.sha512"
+    },
+    "Nito.AsyncEx.Context/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qnth1Ye+QSLg8P3fSFYzk7ue6oUUHQcKpLitgAig8xRFqTK5W1KTlfxF/Z8Eo0BuqZ17a5fAGtXrdKJsLqivZw==",
+      "path": "nito.asyncex.context/5.0.0",
+      "hashPath": "nito.asyncex.context.5.0.0.nupkg.sha512"
+    },
+    "Nito.AsyncEx.Coordination/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kjauyO8UMo/FGZO/M8TdjXB8ZlBPFOiRN8yakThaGQbYOywazQ0kGZ39SNr2gNNzsTxbZOUudBMYNo+IrtscbA==",
+      "path": "nito.asyncex.coordination/5.0.0",
+      "hashPath": "nito.asyncex.coordination.5.0.0.nupkg.sha512"
+    },
+    "Nito.AsyncEx.Interop.WaitHandles/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-roX7jQ7AAEw3CUq/oRj/ACcN1XtfO6fSbYSAjMtjvacN9pqY7Uq2reBFaosbMaMt16EcW+Xw3PwczKzHdZFPRA==",
+      "path": "nito.asyncex.interop.waithandles/5.0.0",
+      "hashPath": "nito.asyncex.interop.waithandles.5.0.0.nupkg.sha512"
+    },
+    "Nito.AsyncEx.Oop/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SKyHsxzXD8b69tPPgMDh7mgMx7GdaSfJ1h2eNS+z2Z/vHsutXTl1sYLOO30fiIkv1umvI1g8GySvYLpVlpt6yA==",
+      "path": "nito.asyncex.oop/5.0.0",
+      "hashPath": "nito.asyncex.oop.5.0.0.nupkg.sha512"
+    },
+    "Nito.AsyncEx.Tasks/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZtvotignafOLteP4oEjVcF3k2L8h73QUCaFpVKWbU+EOlW/I+JGkpMoXIl0rlwPcDmR84RxzggLRUNMaWlOosA==",
+      "path": "nito.asyncex.tasks/5.0.0",
+      "hashPath": "nito.asyncex.tasks.5.0.0.nupkg.sha512"
+    },
+    "Nito.Cancellation/1.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/MehN8HvuOgPZsNmqyu0UdPWXCAJVqcy0LEqw1Ch1++ag1h0qPt5YLH+BCIMFDC5UMW/4RzJW2GdRDYg7Vi2yA==",
+      "path": "nito.cancellation/1.0.5",
+      "hashPath": "nito.cancellation.1.0.5.nupkg.sha512"
+    },
+    "Nito.Collections.Deque/1.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yGDKqCQ61i97MyfEUYG6+ln5vxpx11uA5M9+VV9B7stticbFm19YMI/G9w4AFYVBj5PbPi138P8IovkMFAL0Aw==",
+      "path": "nito.collections.deque/1.0.4",
+      "hashPath": "nito.collections.deque.1.0.4.nupkg.sha512"
+    },
+    "Nito.Disposables/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ExJl/jTjegSLHGcwnmaYaI5xIlrefAsVdeLft7VLtXI2+W5irihiu36LizWvlaUpzY1/llo+YSh09uSHMu2VFw==",
+      "path": "nito.disposables/2.0.0",
+      "hashPath": "nito.disposables.2.0.0.nupkg.sha512"
+    },
+    "Plugin.Badge/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uhmUbdz4LIg00zzBYks0OBfmnKzHpPMaBcd+yzW1xNg6jpZQKEs/27csJSsrV7jcC15GMos+okBJH1vtEg/N/w==",
+      "path": "plugin.badge/2.2.1",
+      "hashPath": "plugin.badge.2.2.1.nupkg.sha512"
+    },
+    "Plugin.CloudFirestore/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4gipkwPMERGYZSDs9C1FgdMsdfHXTpwiOOdrszW6D1iaoz4uvx2tgOHKmhv/w9dHSFuj80iKdfJv/gS/e7RxqA==",
+      "path": "plugin.cloudfirestore/2.0.0",
+      "hashPath": "plugin.cloudfirestore.2.0.0.nupkg.sha512"
+    },
+    "Plugin.Fingerprint/1.4.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J2IzXTorHra6GiQ0E5rQZUmra5ktqPXrgaOvpH47EmejUmEYKYy+g2SbKeJg5sUQ/j6eZl8hPe0tJI65LH0q/A==",
+      "path": "plugin.fingerprint/1.4.9",
+      "hashPath": "plugin.fingerprint.1.4.9.nupkg.sha512"
+    },
+    "Refractored.MvvmHelpers/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IBBHbITCvULc5f5/QH4qB7WBgiGg7BdeKtA5nsBeAXDlhOBWwNt50TBjQOK/s5cm3O+0puDB8n68Yyd9m3JHWQ==",
+      "path": "refractored.mvvmhelpers/1.3.0",
+      "hashPath": "refractored.mvvmhelpers.1.3.0.nupkg.sha512"
+    },
+    "System.Collections.Immutable/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-71hw5RUJRu5+q/geUY69gpXD8Upd12cH+F3MwpXV2zle7Bqqkrmc1JblOTuvUcgmdnUtQvBlV5e1d6RH+H2lvA==",
+      "path": "system.collections.immutable/1.4.0",
+      "hashPath": "system.collections.immutable.1.4.0.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "System.Reactive/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yaVAxT2Yl28p9+DupGwj2oPbIOYZUQimOQ+n7N7vML2oofIRj9BmcfD7DHc6FLrNah65EigOgG6U9VnwWEyz5g==",
+      "path": "system.reactive/4.0.0",
+      "hashPath": "system.reactive.4.0.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "hashPath": "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
+    },
+    "Xam.Plugin.Connectivity/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZV45TaBTCJg7XQNEl3fPyyJcuMMhdDEQ6BCLc/5pMuTv38M226ER0WTu5sbmba8jlliDuzeRqkRFHwrGdWAgyg==",
+      "path": "xam.plugin.connectivity/3.2.0",
+      "hashPath": "xam.plugin.connectivity.3.2.0.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+51728AdZ/qtABGvcIaNXgEoL2jAtxAXLHS8PvGCP0pb6n7twBqYpfgkmwHYVgu+U99szgtL+Jot8L+OXorPcA==",
+      "path": "xamarin.essentials/1.3.1",
+      "hashPath": "xamarin.essentials.1.3.1.nupkg.sha512"
+    },
+    "Xamarin.Forms/4.4.0.991265": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FhG5Sq2wzY8A6IzW3iMVVKqQf4G3hry0joDDGnw1SWBQ5cfW6YNpOiuh2wB/BRPoVnO0SuUBY+b1NPXve72NDQ==",
+      "path": "xamarin.forms/4.4.0.991265",
+      "hashPath": "xamarin.forms.4.4.0.991265.nupkg.sha512"
+    },
+    "Xamarin.Forms.PancakeView/1.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XKP+Fu+xyleh5xTX0N4QhPqP+vae3jjlO50qqu3D4vHa7zSb9kzKKs2gS5Lk4YloD8ZD1D/F7Vg9BakPt8VeDA==",
+      "path": "xamarin.forms.pancakeview/1.3.6",
+      "hashPath": "xamarin.forms.pancakeview.1.3.6.nupkg.sha512"
+    },
+    "ZXing.Net.Mobile/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iCL2WcqOyUnC1iFFdzXijk0EXfoLMDqW88MyhoTZigSyhJZM2C5hKgSZVyfx9E35tgkde/IZwHkk8cVDnbQlYg==",
+      "path": "zxing.net.mobile/2.4.1",
+      "hashPath": "zxing.net.mobile.2.4.1.nupkg.sha512"
+    },
+    "ZXing.Net.Mobile.Forms/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7z+MfL8TbfE36s1GGvrnlkhLUOV5dgdn1gYhUb3GU2W6YXzpfF39k6EqkmFsyNm1O07evTaKFgh7UTOqcWub3g==",
+      "path": "zxing.net.mobile.forms/2.4.1",
+      "hashPath": "zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+    }
+  }
+}

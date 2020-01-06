@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:views="clr-namespace:Munchy.Views"
+            xmlns:views1="clr-namespace:Munchy.Views"
+            xmlns:viewmodels="clr-namespace:Munchy.ViewModels"
+            xmlns:plugin="clr-namespace:Plugin.Badge.Abstractions;assembly=Plugin.Badge.Abstractions"
+            mc:Ignorable="d"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            NavigationPage.HasNavigationBar="False"
+            BarBackgroundColor="White"
+            android:TabbedPage.BarSelectedItemColor="#7D58C9"
+            android:TabbedPage.BarTextColor="Gray"
+            x:Class="Munchy.Views.MainPage"
+            NavigationPage.HasBackButton="False"
+            BackgroundColor="#F5F6F1" x:Name="TappedPage">
+
+
+    <TabbedPage.Children>
+        
+        <views1:ProductsPage  Title="Varer">
+            <views:ProductsPage.IconImageSource>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}"
+                                 Glyph="&#xf2e7;"/>
+            </views:ProductsPage.IconImageSource>
+        </views1:ProductsPage>
+
+        <viewmodels:BasketPage x:Name="basket"
+                               Title="Kurv"
+                               plugin:TabBadge.BadgeText="{Binding Basket.Items.Count}">
+            <viewmodels:BasketPage.IconImageSource>
+
+                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}"
+                                 Glyph="&#xf07a;"/>
+            </viewmodels:BasketPage.IconImageSource>
+        </viewmodels:BasketPage>
+
+
+
+        <views1:RecieptsTappedPage Title="Kvitteringer"
+                                   SelectedTabColor="#7D58C9"
+                                   BarBackgroundColor="#7D58C9">
+            <views:RecieptsTappedPage.IconImageSource>
+
+                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}"
+                                 Glyph="&#xf543;"
+                                 Size="44"
+                                 Color="#7D58C9" />
+            </views:RecieptsTappedPage.IconImageSource>
+        </views1:RecieptsTappedPage>
+
+        <views:MenuPage Title="Menu">
+            <views:MenuPage.IconImageSource>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}"
+                                 Glyph="&#xf0c9;"/>
+            </views:MenuPage.IconImageSource>
+        </views:MenuPage>
+    </TabbedPage.Children>
+
+</TabbedPage>

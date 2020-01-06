@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:Munchy.Converters"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             BackgroundColor="#F5F6F1"
+             x:Class="Munchy.Views.RecieptsPage" IconImageSource="{Binding Icon}">
+
+    <ContentPage.Resources>
+    <ResourceDictionary>
+        <converters:RecieptTextColorConverter x:Key="RecieptTextColorConverter"></converters:RecieptTextColorConverter>
+        <converters:RecieptShowScanBtnConverter x:Key="RecieptShowScanBtnConverter"></converters:RecieptShowScanBtnConverter>
+        <converters:RecieptShowPriceConverter x:Key="RecieptShowPriceConverter"></converters:RecieptShowPriceConverter>
+            <converters:CanGoToPaymentConverter x:Key="HasRecieptsConverter"></converters:CanGoToPaymentConverter>
+    </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+
+        <Image Source="NoItemsCart.png"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" 
+               IsVisible="{Binding Reciepts.Count, Converter={d:StaticResource HasRecieptsConverter }}"> </Image>
+        
+        <ListView  
+            CachingStrategy="RecycleElement"
+            HasUnevenRows="True"
+            x:Name="RecieptListView"
+            ItemsSource="{Binding Reciepts}"
+            VerticalOptions="FillAndExpand"
+            RefreshCommand="{Binding LoadRecieptsCommand}"
+            IsPullToRefreshEnabled="True"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            ItemSelected="OnItemSelected">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <pancakeview:PancakeView HasShadow="True" Elevation="2">
+                            <Grid  RowSpacing="10" Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                            VerticalOptions="Center"
+                            CharacterSpacing="1"
+                            TextColor="{Binding IsScanned, Converter={StaticResource RecieptTextColorConverter}}"
+                            Text="{Binding Text}"
+                            Grid.Row="0" Grid.Column="0"
+                            ></Label>
+                            <Button  Grid.Row="0" Grid.Column="1"
+                            Text="Scan"
+                            CommandParameter="{Binding .}"
+                            BackgroundColor="Transparent"
+                            CharacterSpacing="1"
+                            HorizontalOptions="EndAndExpand"
+                            IsVisible="{Binding IsScanned, Converter={StaticResource RecieptShowScanBtnConverter}}"
+                            ></Button>
+                            <Label 
+                            Text="{Binding Created}"
+                            Grid.Row="1"></Label>
+                            <Label 
+                            Text="{Binding Price , StringFormat='{0:C}' ,Converter={StaticResource RecieptShowScanBtnConverter}}"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            HorizontalOptions="End"
+                            FontAttributes="Bold"
+                            IsVisible="{Binding IsScanned , Converter={StaticResource RecieptShowPriceConverter}}"
+                            VerticalOptions="Center"                           
+                            ></Label>
+                        </Grid>
+                        </pancakeview:PancakeView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </StackLayout>
+</ContentPage>

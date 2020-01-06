@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:renderes="clr-namespace:Munchy.Renderes"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             BackgroundColor="#F5F6F1"
+             x:Class="Munchy.Views.CreatePaymentAuthenticationPage">
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label  Grid.Row="0"
+               x:Name="titleLbl"
+               CharacterSpacing="1"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="15"
+               Text="Beskyt dit kort med kode eller fingeraftryk"
+               VerticalOptions="Center" />
+
+
+            <Button Grid.Row="1"
+                x:Name="fingerprintBtn"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#7D58C9"
+                TextColor="White"
+                CornerRadius="10"
+                CharacterSpacing="1"
+                Text="fingeraftryk"
+                Clicked="fingerprintBtn_Clicked"></Button>
+
+     
+            <Button Grid.Row="2"
+                x:Name="passwordBtn"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#7D58C9"
+                TextColor="White"
+                CornerRadius="10"
+                CharacterSpacing="1"     
+                Text="adgangskode"
+                Clicked="passwordBtn_Clicked"></Button>
+
+        <Entry Grid.Row="0"
+               VerticalOptions="Center"
+               Placeholder="Skriv koden her"
+               TextChanged="passowrdEntry_TextChanged"
+               x:Name="passowrdEntry"
+               IsVisible="False"
+               Keyboard="Numeric"
+               IsPassword="True"></Entry>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:renderes="clr-namespace:Munchy.Renderes"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F5F6F1"
+             
+             x:Class="Munchy.Views.ShowAllProductsPage">
+    <ContentPage.Content>
+        
+        <ScrollView>
+
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+            
+                <Image 
+                       Source="overlay.png"
+                      
+                       Aspect="Fill"
+                       HeightRequest="300"
+                       VerticalOptions="StartAndExpand" />
+                
+                <Grid HorizontalOptions="EndAndExpand" Margin="20">
+
+
+                    <Label Padding="0"
+                           Margin="0"
+                           TextColor="White"
+                           FontSize="20"
+                           FontFamily="{StaticResource FontAwesomeSolid}"
+                           Text="&#xf07a;"></Label>
+
+                    <Label Grid.Column="1" TextColor="White" Text="{Binding Basket.Items.Count}" HorizontalOptions="Start" Margin="0" Padding="0"></Label>
+                    
+
+                </Grid>
+               
+                <StackLayout Grid.Row="0"
+                             Orientation="Horizontal"
+                             Spacing="20"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Start"
+                             Margin="20,50">
+                    <ImageButton WidthRequest="23"
+                                 HeightRequest="15"
+                                 HorizontalOptions="Start"
+                                 VerticalOptions="Center" />
+                    <Label Text="Munchy"
+                           FontSize="16"
+                           VerticalOptions="Center"
+                           TextColor="White" />
+                </StackLayout>
+               
+                <StackLayout Grid.Row="0"
+                             Orientation="Vertical"
+                             Margin="0,20"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+
+                    <renderes:MaterialFrame Elevation="6"
+                                            Padding="0"
+                                            CornerRadius="10">
+                        <SearchBar Placeholder="Søg"
+                                   PlaceholderColor="Black"
+                                   FontFamily="sans-serif-condensed"
+                                   IsSpellCheckEnabled="True"
+                                   BackgroundColor="White"
+                                   TextColor="Black"
+                                   FontSize="16"
+                                   HorizontalOptions="Center" />
+                    </renderes:MaterialFrame>
+                    <Label Text="Søg efter navnet på dit ønskede produckt"
+                           TextColor="White"
+                           FontFamily="sans-serif-condensed"
+                           FontSize="12"
+                           HorizontalOptions="Center" />
+                </StackLayout>
+               
+                <pancakeview:PancakeView Grid.Row="1"
+                                         Elevation="6"
+                                         BackgroundGradientStartColor="#7653C7"
+                                         BackgroundGradientEndColor="White"
+                                         Margin="20,-40,20,0"
+                                         Padding="0"
+                                         HeightRequest="220"
+                                         VerticalOptions="Start">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <forms:AnimationView Animation="artishow.json"
+                                             Grid.Row="1"
+                                             AutoPlay="True"
+                                             Loop="True"
+                                             Grid.Column="0"></forms:AnimationView>
+                        <Label Grid.Column="0"
+                               Grid.Row="0"
+                               Text="Dagens Ret"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               FontSize="Medium"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               Padding="10"
+                               CharacterSpacing="1"></Label>
+
+                    </Grid>
+
+                </pancakeview:PancakeView>
+
+                <Grid x:Name="grid"
+                      Grid.Row="2" Margin="20">
+                </Grid>
+                
+            </Grid>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

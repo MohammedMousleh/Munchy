@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Munchy.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="PageStye"
+                   TargetType="NavigationPage">
+                <Setter Property="BackgroundColor"
+                        Value="#F5F6F1"></Setter>
+                <Setter Property="BarBackgroundColor"
+                        Value="#F5F6F1"></Setter>
+            </Style>
+
+            <OnPlatform x:TypeArguments="x:String"
+                        x:Key="FontAwesomeSolid">
+                <On Platform="Android"
+                    Value="FontAwesome5Solid.otf#Regular" />
+                <On Platform="iOS"
+                    Value="FontAwesome5Free-Solid" />
+                <On Platform="UWP"
+                    Value="/Assets/FontAwesome5Solid.otf#Font Awesome 5 Free" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String"
+                        x:Key="FontAwesomeRegular">
+                <On Platform="Android"
+                    Value="FontAwesome5Regular.otf#Regular" />
+                <On Platform="iOS"
+                    Value="FontAwesome5Free-Regular" />
+                <On Platform="UWP"
+                    Value="/Assets/FontAwesome5Regular.otf#Font Awesome 5 Free" />
+            </OnPlatform>
+
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>
